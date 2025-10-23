@@ -1,0 +1,100 @@
+/* Forceer een donkere scrollbar (voor Webkit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #111827; /* gray-900 */
+}
+::-webkit-scrollbar-thumb {
+    background: #4b5563; /* gray-600 */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; /* gray-500 */
+}
+
+/* Stijl de 'range' inputs (seeker en volume) */
+.player-seeker,
+.player-volume {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #374151; /* gray-700 */
+    border-radius: 3px;
+    outline: none;
+    transition: opacity 0.2s, background 0.1s ease-in-out;
+}
+
+/* Thumb (het balletje) voor Webkit (Chrome, Safari) */
+.player-seeker::-webkit-slider-thumb,
+.player-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #ffffff; /* Wit */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+    margin-top: -4px; /* Centreer op de balk */
+}
+
+/* Thumb voor Firefox */
+.player-seeker::-moz-range-thumb,
+.player-volume::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background 0.1s ease-in-out;
+}
+
+/* Hover-stijlen voor de thumbs */
+.player-seeker:hover::-webkit-slider-thumb {
+    background: #10b981; /* Groen */
+}
+.player-seeker:hover::-moz-range-thumb {
+    background: #10b981; /* Groen */
+}
+
+/* Volume thumb: blijft wit bij hover */
+.player-volume:hover::-webkit-slider-thumb {
+     background: #ffffff;
+}
+.player-volume:hover::-moz-range-thumb {
+     background: #ffffff;
+}
+
+
+/* Gekleurde track voor de seeker (via JS) */
+.player-seeker {
+     background: linear-gradient(to right, #10b981 0%, #374151 0%);
+}
+
+/* Gekleurde track voor volume (via JS) */
+.player-volume {
+     background: linear-gradient(to right, #ffffff 80%, #374151 80%);
+}
+
+/* Dropdown menu (standaard verborgen) */
+.dropdown-menu {
+    transition: opacity 0.1s ease-out;
+}
+
+/* Stijl voor de file input */
+.file-input::-webkit-file-upload-button {
+  background: #374151; /* gray-700 */
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.file-input::-webkit-file-upload-button:hover {
+  background: #4b5563; /* gray-600 */
+}

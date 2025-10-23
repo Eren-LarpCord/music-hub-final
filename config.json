@@ -1,0 +1,7 @@
+{
+  "music_directory": "music",
+  "data_directory": "data",
+  "database_url": "sqlite:data/musichub.db",
+  "preferred_codec": "mp3",
+  "preferred_quality": "128"
+}
